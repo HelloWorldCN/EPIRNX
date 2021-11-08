@@ -93,6 +93,7 @@ def build_model() -> Model:
     Z = Dense(units=1, activation='sigmoid')(Z)
 
     model = Model(inputs=[enhancer_input, promoter_input], outputs=Z)
+    # model = Model(inputs=[enhancer_input, promoter_input], outputs=merge_layer)
 
     return model
 
